@@ -1,0 +1,53 @@
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Menu } from './menu';
+import {MenuService} from './menu.service';
+
+import {
+	       FormGroup,
+		   FormBuilder,
+		   Validators,
+		   FormControl
+} from '@angular/forms';
+import {NgForm} from '@angular/forms';
+import { Subscription } from 'rxjs/Subscription';
+import { Router, ActivatedRoute } from '@angular/router';
+
+@Component({
+	selector: 'menu-edit',
+    template: `
+        <h2>Menus - edit</h2>
+	        `
+    //templateUrl: 'app/menus/menu-form.html',
+})
+
+//export class MenuEditComponent  implements OnInit {
+export class MenuEditComponent {
+	public menu: any = {};
+	errorMessage: string;
+	public isEdit: boolean = true;
+	id: string;
+
+	constructor( private _menuService: MenuService, private _router: Router, private _route: ActivatedRoute  ){
+    }
+
+	//ngOnInit(){
+	//	this._route.params.subscribe(params => {
+	//		this.id = params['id'];
+	//	});
+	//	this._menuService.getMenuById(this.id).subscribe( menu => {
+	//		this.menu = menu;
+	//	});
+	//}
+
+	//onSubmit(f: NgForm) {
+
+	//	this._menuService.updateMenuByMenuObj( this.menu ).subscribe(
+	//		ans => {},
+    //        error =>  this.errorMessage = <any>error				
+	//	);
+
+	//	this._router.navigateByUrl('/');
+
+	//}
+
+}

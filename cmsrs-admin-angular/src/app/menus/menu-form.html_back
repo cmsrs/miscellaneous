@@ -1,0 +1,44 @@
+<div class="client-form">
+	<form  class="well" [formGroup]="menuForm" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+		<h3 *ngIf="!isEdit">Add Menu</h3>
+		<h3 *ngIf="isEdit">Edit Menu</h3>
+
+		<div *ngFor="let lang of langs ">
+			<div class="form-group">
+				<label>Name {{lang}}</label>
+				<input type="text" class="form-control" required  [(ngModel)]="translates.test" name="menu_short_title" placeholder="Name"    >
+				<!-- #name="ngModel"   menu.translates.menu_short_title[lang]  -->
+				<!--<div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+					<div [hidden]="!name.errors.required">
+						Field is required
+					</div>
+				</div> -->
+			</div>
+		</div>
+
+
+		<h3>menu params</h3>
+		<div  class="form-group" >
+			<label>
+				<!--				<input name="published" type="checkbox"  [(ngModel)]="menu.published" #published="ngModel"    ng-true-value="'1'" ng-false-value="'0'"  />-->
+				<input type="checkbox"  formControlName="published" />
+				published
+			</label>
+		</div>
+
+		<div  class="form-group">
+			<label for="position">
+<!--			<select name="position" id="position" ng-model="menu.position" require >
+				<option ng-repeat="option in positions" value="{{option}}">{{option}}</option>
+</select>-->
+			position
+			</label>
+		</div>
+
+
+
+<!--				<button  [disabled]="!ngForm.valid"  (click)="addUser()" class="btn btn-primary">Submit</button> -->
+		<button type="submit" class="btn btn-success" [disabled]="!f.form.valid">Submit</button>
+	</form>
+</div>

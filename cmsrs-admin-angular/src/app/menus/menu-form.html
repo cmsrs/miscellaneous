@@ -1,0 +1,35 @@
+<div class="client-form">
+	<form  class="well" [formGroup]="menuForm"  (ngSubmit)="onSubmit( menuForm )" novalidate>
+
+		<h3 *ngIf="!isEdit">Add Menu</h3>
+		<h3 *ngIf="isEdit">Edit Menu</h3>
+
+		<div formArrayName="translates" >
+			<div *ngFor="let t of menuForm.controls.translates.controls; let i=index">
+				<div class="form-group" [formGroupName]="i" >
+					<label>Name {{t.controls.lang.value}}:</label>
+					<input type="text"  class="form-control"    formControlName="value" /> 
+					<input type="hidden"  class="form-control"  formControlName="lang" /> 
+					<input type="hidden"  class="form-control"  formControlName="type" /> 
+				</div>
+			</div>
+		</div>
+
+		<h3>menu params</h3>
+		<div  class="form-group"  >
+			<label>published</label>
+			<input type="checkbox"  formControlName="published" />
+		</div>
+
+		<div  class="form-group">
+			<label>position</label>
+
+			<select name="position" id="position" formControlName="position" require >
+				<option *ngFor="let p of positions" [ngValue]="p">{{p}}</option>
+			</select>
+		</div>
+
+
+		<button type="submit" class="btn btn-success" [disabled]="!menuForm.valid">Submit</button>
+	</form>
+</div>
