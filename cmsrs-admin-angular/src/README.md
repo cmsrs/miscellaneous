@@ -1,4 +1,4 @@
-###cmsrs-admin-angular2
+# cmsrs-admin-angular2
 
 Administration panel for cmsrs in Angular2
 
