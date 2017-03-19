@@ -1,4 +1,4 @@
-# obsługa statosu + testy :)
+# obsługa stosu + testy:
 
 wywolanie testow:
 $phpunit  StackTest.php
