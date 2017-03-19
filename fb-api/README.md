@@ -4,6 +4,8 @@ Srodowiko: LAMP
 
 1. 
 utworzenie baz danych:
+
+<pre>
 CREATE DATABASE `testrs`  CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE TABLE `fb` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -23,6 +25,7 @@ CREATE TABLE `fb` (
  `end_time` varchar(128) DEFAULT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8
+</pre>
 
 
 2.
@@ -38,7 +41,7 @@ popranie: {app-access-token} i {event-id}
 
    - zapisac: app_id|app_secret do plikow koniguracyjnych
 
-   - zapisac event-id do plikow konfiguracyjnych z https://www.facebook.com/events/{event-id}. simple right?
+   - zapisac event-id do plikow konfiguracyjnych z https://www.facebook.com/events/{event-id}.
 
    - informacyjnie: json dostajemy z: https://graph.facebook.com/{event-id}?access_token={app-access-token} 
 
@@ -48,13 +51,15 @@ popranie: {app-access-token} i {event-id}
 uruchomienie programu:
 http://test.loc/task3/
 lub 
+```bash
 $cd task3/
 $php index.php
-
+````
 
 
 5. 
 uruchomienie testow:
+```bash
 $cd ./tests/
 $phpunit ./MainTests.php
-
+```
