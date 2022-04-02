@@ -11,7 +11,7 @@ jak zdobywasz wiedze?
 
 2. jakiego systemu operacyjnego uzywasz?
 
-3. jaki wolisz istniejacy czy obecny kod?
+3. jaki wolisz istniejacy kod czy razczej wolisz od początku aplikację programować?
 
 4. czy wolisz programowac front czy backend?
 
@@ -22,37 +22,36 @@ jak zdobywasz wiedze?
 - co to jest cherry-pick?
 - co to jest merge - wytlumacz jak to sie uzywa
 
-
 6. co to jest wsdl?
 
-7.
-zasada:
+7. zasada:
 -dry
 -kiss
+Co Ci mowią te skróty?
 
 8. jakie sa różnice modyfikatorów protected public private przed metoda
 
 9. composer install od composer update - jakie roznice
 
-10. jak wyszukac slowa 'text' w basu w konsoli (we wszystkich plikach) z pominieciem slowa 'tekst1'
+10. jak wyszukac slowa 'text' w basu w konsoli (we wszystkich plikach) z pominieciem slowa 'storage'
 $ grep -r  'text' | grep -v 'storage'
 
 11. istniejacy kod - review (patrz nizej)
 Dostajesz istniejacy kod:
 
-Czy jakies widzis w nim bledy? - czy jest ok wg Ciebie?
+Czy widzis jakieś w nim bledy? - czy jest ok wg Ciebie?
 
 Glowne bledy:
 - brak walidacji danych po stronie serwera (pytanie pomocnicze: po co walidowac te dane skoro w html-u zostalo to juz zrobione?)
-- wszystko w kontrolerze - powinno byc w modelach (bo tatweij sie testuje i jest to kluczowa zasada wzorca MVC)
-- w petli zapytania nie sa optymalnie w metodzire show
+- wszystko w kontrolerze - powinno byc w modelach, czemu? (bo tatwiej sie testuje i jest to kluczowa zasada wzorca MVC)
+- w petli zapytania nie sa optymalnie w metodzie show
 
 Pytania pomocnicze
 - czy pisales testy? 
 - czy testy jednostkowe w.g. Ciebie maja sens? (bo przeciez nie ma czasu na robienie testow)
-- jak debagujesz kod?
-- jaki bys chcial zastac kod jakbys przejmowal od kogos innego? (dokumentacja testy manulane i automatycznre)
+- jak debagujesz kod? (czy używasz xDebug-a?)
 - co robisz z bledami, ktore znalazles? (zakladajac ze w danej chwili masz o wiele wazniejsze rzeczy do zrobienia)
+- jaki bys chcial zastac kod jakbys przejmowal od kogos innego? (dokumentacja testy manulane i automatycznre)
 
 
 12. na koniec wysylamy te same zadanie rekrutacyjne ktore ja dostalem
