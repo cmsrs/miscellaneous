@@ -31,7 +31,7 @@ Co Ci mowią te skróty?
 
 8. jakie sa różnice modyfikatorów protected public private przed metoda
 
-9. composer install od composer update - jakie roznice
+9. 'composer install' od 'composer update' - jakie roznice
 
 10. jak wyszukac slowa 'text' w basu w konsoli (we wszystkich plikach) z pominieciem slowa 'storage'
 $ grep -r  'text' | grep -v 'storage'
@@ -53,8 +53,21 @@ Pytania pomocnicze
 - co robisz z bledami, ktore znalazles? (zakladajac ze w danej chwili masz o wiele wazniejsze rzeczy do zrobienia)
 - jaki bys chcial zastac kod jakbys przejmowal od kogos innego? (dokumentacja testy manulane i automatycznre)
 
+12.
+$cat test.js:
+var a = {'a':1, 'b':2};
+var b = a;
+b.c = 3;
+console.log(a);
 
-12. na koniec wysylamy te same zadanie rekrutacyjne ktore ja dostalem
+co zwrocili polecenie:
+$nodejs test.js
+i czemu? 
+pyt pomocnicze: co zrobić, aby w zmiennej a byly tylko bazowe dane?
+
+
+
+13. na koniec wysylamy te same zadanie rekrutacyjne ktore ja dostalem
 
 
 
